@@ -1,4 +1,5 @@
 from ast import operator
+from glob import glob
 import re
 from math import*
 from tkinter import*
@@ -11,6 +12,7 @@ mansLogs.title("+-*/=calc")# iedod nosaukumu
 #poga.pack()
 e=Entry(mansLogs,width=15, bd=20, font=("Arial Black",20), bg=("black"), fg=("white"))
 e.grid(row=0,column=0,columnspan=4)
+
 
 
 def btnClick(number):
@@ -44,6 +46,11 @@ def equal(command):
         result= num1*num2
     elif mathOp=="/":
         result=num1/num2
+    elif mathOp=="x2":
+        result=num1**2
+    elif mathOp=="%":
+        result= num1*0.01*num2
+
     else:
         result=0
     e.delete(0,END)
@@ -80,6 +87,23 @@ def lo_g():
     e.insert(0,num1)
     return 0
 
+# kaapini----------------------------------------------
+def kva_drats():
+    global operator
+    global num1
+    global mathOp 
+    num1=(float(e.get()))
+    num1=num1 **2
+    e.delete(0,END)
+    e.insert(0,num1)
+    return 0
+
+
+
+
+
+
+
 
 
 
@@ -100,9 +124,9 @@ btn13=Button(mansLogs,text="- ", padx="20", pady="10", command=lambda:btnCommand
 btn14=Button(mansLogs,text="= ", padx="20", pady="10",bg="black",bd=10, fg="hot pink", command=lambda:equal("="))
 btn15=Button(mansLogs,text="C",padx="20", pady="10",bg="black", bd=10,fg="hot pink", command=lambda:clear("C"))
 btn16=Button(mansLogs,text="✓",padx="20", pady="10",bg="black", bd=10,fg="hot pink", command=sakne)
-btn17=Button(mansLogs,text="%",padx="20", pady="10",bg="black", bd=10,fg="hot pink", command=lambda:clear("%"))
-btn18=Button(mansLogs,text="x2",padx="20", pady="10",bg="black", bd=10,fg="hot pink", command=lambda:clear("x2"))
-btn19=Button(mansLogs,text="log",padx="20", pady="10",bg="black", bd=10,fg="hot pink", command=lo_g)
+btn17=Button(mansLogs,text="%",padx="20", pady="10",bg="black", bd=10,fg="hot pink", command=lambda:btnCommand(""))
+btn18=Button(mansLogs,text="x2",padx="20", pady="10",bg="black", bd=10,fg="hot pink", command=kva_drats)
+btn19=Button(mansLogs,text="log",padx="15", pady="10",bg="black", bd=10,fg="hot pink", command=lo_g)
 
 
 
@@ -122,12 +146,12 @@ btn10.grid(row=2,column=3)
 btn11.grid(row=3,column=3)
 btn13.grid(row=5,column=3)
 btn12.grid(row=4,column=3)
-btn14.grid(row=5,column=2)
+btn14.grid(row=5,column=0)
 btn15.grid(row=1,column=3)
 btn16.grid(row=1,column=0)
 btn17.grid(row=1,column=1)
 btn18.grid(row=1,column=2)
-btn19.grid(row=5,column=0)
+btn19.grid(row=5,column=2)
 
 
 
