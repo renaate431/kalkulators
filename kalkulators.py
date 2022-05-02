@@ -4,7 +4,10 @@ import re
 from math import*
 from tkinter import*
 
-mansLogs=Tk() #saiisinājums tkinker
+
+
+mansLogs=Tk()#saiisinājums tkinker
+mansLogs.configure(bg='black')
 mansLogs.title("+-*/=calc")# iedod nosaukumu
 #mansLogs.geometry("300x400")# loga izmērs, kalkulatora izmērs
 #poga=Button(mansLogs, text="hey!", bg="green", fg="white") #bg -background fg=priekšplāna krāsa
@@ -107,23 +110,23 @@ def kva_drats():
 
 
 
-btn0=Button(mansLogs, text="0 ", padx="20", pady="10", command=lambda:btnClick(0),bg="black",bd=10, fg="hot pink")# funkcija 
-btn1=Button(mansLogs, text="1 ", padx="20", pady="10", command=lambda:btnClick(1),bg="black",bd=10, fg="hot pink")
-btn2=Button(mansLogs, text="2 ", padx="20", pady="10", command=lambda:btnClick(2),bg="black",bd=10 ,fg="hot pink")
-btn3=Button(mansLogs, text="3 ", padx="20", pady="10", command=lambda:btnClick(3),bg="black",bd=10, fg="hot pink")
-btn4=Button(mansLogs, text="4 ", padx="20", pady="10", command=lambda:btnClick(4),bg="black",bd=10, fg="hot pink")
-btn5=Button(mansLogs, text="5 ", padx="20", pady="10", command=lambda:btnClick(5),bg="black", bd=10,fg="hot pink")
-btn6=Button(mansLogs, text="6 ", padx="20", pady="10", command=lambda:btnClick(6),bg="black",bd=10, fg="hot pink")
-btn7=Button(mansLogs, text="7 ", padx="20", pady="10", command=lambda:btnClick(7),bg="black",bd=10, fg="hot pink")
-btn8=Button(mansLogs, text="8 ", padx="20", pady="10", command=lambda:btnClick(8),bg="black",bd=10, fg="hot pink")
-btn9=Button(mansLogs, text="9 ", padx="20", pady="10", command=lambda:btnClick(9),bg="black",bd=10, fg="hot pink")
-btn10=Button(mansLogs,text="/ ", padx="20", pady="10", command=lambda:btnCommand("/"),bg="black", bd=10,fg="hot pink")
-btn11=Button(mansLogs,text="* ", padx="20", pady="10", command=lambda:btnCommand("*"),bg="black",bd=10, fg="hot pink")
-btn12=Button(mansLogs,text="+ ", padx="20", pady="10", command=lambda:btnCommand("+"),bg="black",bd=10, fg="hot pink")
-btn13=Button(mansLogs,text="- ", padx="20", pady="10", command=lambda:btnCommand("-"),bg="black",bd=10, fg="hot pink")
+btn0=Button(mansLogs, text=" 0 ", padx="20", pady="10", command=lambda:btnClick(0),bg="black",bd=10, fg="hot pink")# funkcija 
+btn1=Button(mansLogs, text=" 1 " , padx="20", pady="10", command=lambda:btnClick(1),bg="black",bd=10, fg="hot pink")
+btn2=Button(mansLogs, text=" 2 ",  padx="20", pady="10", command=lambda:btnClick(2),bg="black",bd=10 ,fg="hot pink")
+btn3=Button(mansLogs, text=" 3 ", padx="20", pady="10", command=lambda:btnClick(3),bg="black",bd=10, fg="hot pink")
+btn4=Button(mansLogs, text=" 4 ", padx="20", pady="10", command=lambda:btnClick(4),bg="black",bd=10, fg="hot pink")
+btn5=Button(mansLogs, text=" 5 ", padx="20", pady="10", command=lambda:btnClick(5),bg="black", bd=10,fg="hot pink")
+btn6=Button(mansLogs, text=" 6 ", padx="20", pady="10", command=lambda:btnClick(6),bg="black",bd=10, fg="hot pink")
+btn7=Button(mansLogs, text=" 7 ", padx="20", pady="10", command=lambda:btnClick(7),bg="black",bd=10, fg="hot pink")
+btn8=Button(mansLogs, text=" 8 ", padx="20", pady="10", command=lambda:btnClick(8),bg="black",bd=10, fg="hot pink")
+btn9=Button(mansLogs, text=" 9 ", padx="20", pady="10", command=lambda:btnClick(9),bg="black",bd=10, fg="hot pink")
+btn10=Button(mansLogs,text=" / ", padx="20", pady="10", command=lambda:btnCommand("/"),bg="black", bd=10,fg="hot pink")
+btn11=Button(mansLogs,text=" * ", padx="20", pady="10", command=lambda:btnCommand("*"),bg="black",bd=10, fg="hot pink")
+btn12=Button(mansLogs,text="+", padx="20", pady="10", command=lambda:btnCommand("+"),bg="black",bd=10, fg="hot pink")
+btn13=Button(mansLogs,text=" - ", padx="20", pady="10", command=lambda:btnCommand("-"),bg="black",bd=10, fg="hot pink")
 btn14=Button(mansLogs,text="= ", padx="20", pady="10",bg="black",bd=10, fg="hot pink", command=lambda:equal("="))
 btn15=Button(mansLogs,text="C",padx="20", pady="10",bg="black", bd=10,fg="hot pink", command=lambda:clear("C"))
-btn16=Button(mansLogs,text="✓",padx="20", pady="10",bg="black", bd=10,fg="hot pink", command=sakne)
+btn16=Button(mansLogs,text="√",padx="20", pady="10",bg="black", bd=10,fg="hot pink", command=sakne)
 btn17=Button(mansLogs,text="%",padx="20", pady="10",bg="black", bd=10,fg="hot pink", command=lambda:btnCommand(""))
 btn18=Button(mansLogs,text="x2",padx="20", pady="10",bg="black", bd=10,fg="hot pink", command=kva_drats)
 btn19=Button(mansLogs,text="log",padx="15", pady="10",bg="black", bd=10,fg="hot pink", command=lo_g)
@@ -146,12 +149,12 @@ btn10.grid(row=2,column=3)
 btn11.grid(row=3,column=3)
 btn13.grid(row=5,column=3)
 btn12.grid(row=4,column=3)
-btn14.grid(row=5,column=0)
+btn19.grid(row=5,column=0)
 btn15.grid(row=1,column=3)
 btn16.grid(row=1,column=0)
 btn17.grid(row=1,column=1)
 btn18.grid(row=1,column=2)
-btn19.grid(row=5,column=2)
+btn14.grid(row=5,column=2)
 
 
 
